@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopEase</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-dark me-2">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="badge bg-dark text-white ms-1">0</span>
+                    </a>
+                    <button class="btn btn-outline-dark">
+                        <i class="fas fa-user"></i> Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Filters</h5>
+                        <hr>
+                        <!-- Price Range -->
+                        <div class="mb-4">
+                            <h6>Price Range</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="price1">
+                                <label class="form-check-label" for="price1">Under $50</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="price2">
+                                <label class="form-check-label" for="price2">$50 - $100</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="price3">
+                                <label class="form-check-label" for="price3">$100 - $200</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="price4">
+                                <label class="form-check-label" for="price4">Over $200</label>
+                            </div>
+                        </div>
+                        <!-- Categories -->
+                        <div class="mb-4">
+                            <h6>Categories</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat1">
+                                <label class="form-check-label" for="cat1">Electronics</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat2">
+                                <label class="form-check-label" for="cat2">Fashion</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat3">
+                                <label class="form-check-label" for="cat3">Home & Living</label>
+                            </div>
+                        </div>
+                        <!-- Ratings -->
+                        <div class="mb-4">
+                            <h6>Ratings</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rating1">
+                                <label class="form-check-label" for="rating1">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rating2">
+                                <label class="form-check-label" for="rating2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="col-md-9">
+                <!-- Sort Options -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0">All Products</h4>
+                    <div class="d-flex align-items-center">
+                        <label class="me-2">Sort by:</label>
+                        <select class="form-select" style="width: auto;">
+                            <option>Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="row">
+                    <!-- Product 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Headphones</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <span class="ms-1">(4.0)</span>
+                                </div>
+                                <p class="card-text">$99.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Watch</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="ms-1">(5.0)</span>
+                                </div>
+                                <p class="card-text">$149.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Bluetooth Speaker</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <span class="ms-1">(4.0)</span>
+                                </div>
+                                <p class="card-text">$79.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Earbuds</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                    <span class="ms-1">(4.5)</span>
+                                </div>
+                                <p class="card-text">$129.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Power Bank</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <span class="ms-1">(4.0)</span>
+                                </div>
+                                <p class="card-text">$49.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Home Camera</h5>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="ms-1">(5.0)</span>
+                                </div>
+                                <p class="card-text">$89.99</p>
+                                <button class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>ShopEase</h5>
+                    <p>Your one-stop shop for all your needs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
